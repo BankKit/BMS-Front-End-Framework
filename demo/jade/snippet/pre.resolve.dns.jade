@@ -1,0 +1,36 @@
+//
+
+	Build Passing.
+	
+	Doctype: HTML5
+	
+	Jade: 1.3.0+
+	
+	#TODO[x]: Pre-Resolve DNS
+		
+		Firefox 3.5+, Chrome, Safari 5+ and IE 9+
+		
+		Conditional comments were disabled in IE10.
+		However, IE10+ are much less buggy than the earlier ones.
+		So I supposed that they are the browser just like google 
+		browser(A Level).
+
+- var opts = {ie9: true, prefetchUrl: ['http://www.google-analytics.com/', 'http://s17.cnzz.com/', 'http://resource.fenqimall.com/']}
+
+mixin prefetch_loop (rel, urls)
+
+	- for (var i = 0; i < urls.length; i++)
+
+		link(rel=rel, href=urls[i])
+
+meta(http-equiv='x-dns-prefetch-control', content='off')
+
+if opts.ie9
+
+	+ie('if IE 9]', '[endif')
+
+		+prefetch_loop('prefetch', opts.prefetchUrl)
+
++ie('if gt IE 9]><!--', '--<![endif')
+
+	+prefetch_loop('dns-prefetch', opts.prefetchUrl)

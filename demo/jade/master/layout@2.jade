@@ -1,0 +1,266 @@
+mixin ie (sCondition, eCondition)
+
+	|<!--[!{sCondition}>
+	
+	block
+	
+	|<!!{eCondition}]-->
+
+
+
+mixin accordian-item-inner-loop (ln, bool)
+
+	- for (var i = 1; i <= ln; i++)
+
+		if bool
+
+			if i === 1
+
+				li(class='choosen')
+
+					a(href='#', class='clean-link border_box') ▇▇▇▇▇▇▇
+
+			else
+
+				li
+
+					a(href='#', class='clean-link border_box') ▇▇▇▇▇▇▇
+
+		else
+
+			li
+
+				a(href='#', class='clean-link border_box') ▇▇▇▇▇▇▇
+
+mixin accordian-item-out-loop (ln, bool, lnAry, boolAry)
+
+	- for (var i = 1; i <= ln; i++)
+
+		if bool
+
+			if i === 1
+
+				li
+
+					h4(class='border_box slider-header current') ▇▇▇▇▇▇
+
+					ul(class='slider-content hide')
+
+						+accordian-item-inner-loop(lnAry[i-1], boolAry[i-1])
+
+			else
+
+				li
+
+					h4(class='border_box slider-header') ▇▇▇▇▇▇
+
+					ul(class='slider-content hide')
+
+						+accordian-item-inner-loop(lnAry[i-1], boolAry[i-1])
+
+		else
+
+			li
+
+				h4(class='border_box slider-header') ▇▇▇▇▇▇
+
+				ul(class='slider-content hide')
+
+					+accordian-item-inner-loop(lnAry[i-1], boolAry[i-1])
+
+
+
+mixin jsloader (url)
+
+	script(data-main=url, src='//resource.fenqimall.com/ajax/libs/js/requirejs/2.1.11/require.min.js')
+
+
+
+doctype html
+
+<!--[if IE 7]><html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="zh"><![endif]-->
+
+<!--[if IEMobile 7]><html class="no-js iem7" lang="zh" itemscope itemtype="http://schema.org/WebPage" manifest='../manifest.appcache'><![endif]-->
+
+<!--[if IE 8]><html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="zh"><![endif]-->
+
+<!--[if IE 9]><html class="ie ie9 ie-lt10 no-js" lang="zh" itemscope itemtype="http://schema.org/WebPage"><![endif]-->
+
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)]><!-->
+html(class="no-js", lang="zh", itemscope itemtype="http://schema.org/WebPage", manifest='../manifest.appcache')
+	<!--<![endif]-->
+	
+	head
+		
+		//
+			Maybe we can remove meta charset.
+			Use the server configs or sets the proper value for the HTTP header.
+			https://github.com/h5bp/html5-boilerplate/pull/1520
+		meta(charset='utf-8')
+		
+		meta(target='_self')
+		
+		block title
+		
+		// Pre-Resolve DNS Snippet
+		include ../snippet/pre.resolve.dns.jade
+		
+		// Offical: IE = EmulateIE7, IE = 10, IE = edge, chrome = 1
+		meta(http-equiv='X-UA-Compatible', content='ie = edge, chrome = 1')
+		
+		//
+			IOS Safari: Fixed in iOS 7.1 beta 2, A property, minimal-ui, has been added for 
+			the viewport meta tag key that allows minimizing the top and bottom bars on the 
+			iPhone as the page loads. While on a page using minimal-ui, tapping the top bar 
+			brings the bars back. Tapping back in the content dismisses them again. 
+			Reference, 
+			http://www.everythingicafe.com/forum/threads/lets-talk-ios-7-1-beta-2.104595/
+		meta(name='viewport', content='width = device-width, initial-scale = 1, minimal-ui')
+		
+		meta(name='HandheldFriendly', content='true')
+		
+		// Microsoft introduced the MobileOptimized tag for the PocketPC
+		meta(name='MobileOptimized', content='320')
+		
+		//
+			Mobile Internet Explorer allows us to activate ClearType technology for 
+			smoothing fonts for easy reading
+		meta(http-equiv='cleartype', content='on')
+		
+		link(rel='canonical', href='')
+		
+		meta(name='url', content='')
+		
+		meta(name='identifier-URL', content='')
+		
+		meta(name='linkage', content='')
+		
+		// production: content = "all"; development: content = "none".
+		meta(name='Robots', content='none')
+		
+		// production: content = "public"; development: content = "no-cache".
+		meta(http-equiv='cache-control', content='no-cache')
+		
+		// production: content = "max-age"; development: content = "0".
+		meta(http-equiv='expires', content='0')
+		
+		meta(http-equiv='windows-Target', content='_top')
+		
+		meta(name='keywords', content='')
+		
+		meta(name='description', content='')
+		
+		meta(name='copyright', content='')
+		
+		// Site Icon
+		include ../snippet/site.icon.meta.jade
+		
+		// Apple Meta Tag
+		include ../snippet/apple.meta.jade
+		
+		link(rel='author', type='text/plain', href='')
+		
+		// Public stylesheet snippet.
+		include ../snippet/public.stylesheet.jade
+		
+		// Private stylesheet snippet.
+		block private-stylesheet
+		
+		// Public script snippet.
+		include ../snippet/public.script.jade
+
+		script.
+
+			new WOW().init();
+		
+	body
+
+		header(class='rela border_box container-outside boss-header wow fadeInRight', itemscope itemtype='http://schema.org/WPHeader')
+
+			div(class='border_box container')
+
+				div(class='relative border_box clearfix content')
+
+					div(class='right person-info')
+
+						div(class='clearfix person-panel-top')
+
+							a(class='left avatars' href='#')
+
+								img(src='http://placehold.it/38x38')
+
+							div(class='left person-detail')
+
+								a(class='person-name hover-link' href='#') ▇▇▇▇▇▇
+
+								div(class='person-job') ▇▇▇▇▇▇
+
+						div(class='person-panel-bottom')
+
+							a(class='user-state off' href='#') &nbsp;
+
+					a(class='right clearfix person-block pb_1' href='#')
+
+						div(class='left pbd_1') 完成
+
+						div(class='right pbd_2') (99999)
+
+					a(class='right clearfix person-block pb_2' href='#')
+
+						div(class='left pbd_1') 通知
+
+						div(class='right pbd_2') (99999)
+
+					a(class='right clearfix person-block pb_3' href='#')
+
+						div(class='left pbd_1') 待办
+
+						div(class='right pbd_2') (99999)
+
+					// Fucking Jerk · Hengyuan Finance
+					h1(class='absolute left init') ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+
+		aside(class='fixed border_box wow fadeInLeft', itemscope itemtype='http://www.schema.org/WPSideBar')
+
+			a(class='left x-center logo', itemscope itemtype='http://schema.org/logo')
+
+			div(class='text-left border_box slogan slogan-1') Management System
+
+			div(class='text-center slogan slogan-2') 亨元金融后台管理系统
+
+			div(class='text-right border_box slogan slogan-3') v2.0.1
+
+			ul(class='accordian')
+
+				+accordian-item-out-loop(4, true, [5, 3, 6, 12], [true, false, false, false])
+
+			a(href='tel:02162307418', class='left x-center hover-link contact-tel border_box') (021)6230-7418
+
+			address(class='left x-center border_box') 上海市静安区安远路555号静安门大厦808室
+
+		main(class='rela minHeight-2000 container-outside border_box area-placeholder wow fadeInRight', role='main')
+
+			div(class='border_box container minHeight-2000')
+
+				div(class='border_box content minHeight-2000')
+
+					block content
+
+		block private-script
+		
+		include ../snippet/google.analytics.jade
+
+
+// ___________  ______    _____  ___   ___  ___
+//("     _   ")/    " \  (\"   \|"  \ |"  \/"  |
+// )__/  \\__/// ____  \ |.\\   \    | \   \  /
+//	\\_ /  /  /    ) :)|: \.   \\  |  \\  \/
+//	|.  | (: (____/ // |.  \    \. |  /   /
+//	\:  |  \        /  |    \    \ | /   /
+//	 \__|   \"_____/    \___|\____\)|___/ 沈维忠 ( Shen Weizhong / Tony Stark ).
+//
+//* Version: 0.1.0-alpha
+//
+//* Creation Date: 2014.04.04 16:45 ( Tony ).
+//
+//* Last Update: 2014.04.16 17:26 ( Tony ).

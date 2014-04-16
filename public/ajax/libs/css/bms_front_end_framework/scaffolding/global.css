@@ -1,0 +1,299 @@
+@charset "utf-8";
+
+
+
+/**
+ * Statement: ...//TODO: Write statement.
+ * 
+ * Describe: Global Styles.
+ * 
+ * Further Changes, Comments: ...//TODO: Give a further changes and comments link.
+ * 
+ * Docs: ...//TODO: Give a link about project documents.
+ * 
+ * Original Author: 沈维忠 ( Shen Weizhong / Tony Stark ).
+ * 
+ * Thanks: ...//TODO: If there are some contributors, just mark them.
+ * 
+ * Version: 0.1.0-alpha
+ * 
+ * Creation Date: 2014.03.26 14:31 ( Tony ).
+ * 
+ * Last update: 2014.04.16 15:02 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * 
+ * Music ( Custom ):     ...//TODO: If you are listenning some music, just write the name of songs.
+ * 
+ * License: ...//TODO: Give a license.
+ * 
+ * Copyright: ...//TODO: Give a copyright.
+ */
+
+
+
+/* 
+ ::::::::  :::        ::::::::  :::::::::      :::     :::
+:+:    :+: :+:       :+:    :+: :+:    :+:   :+: :+:   :+:
++:+        +:+       +:+    +:+ +:+    +:+  +:+   +:+  +:+
+:#:        +#+       +#+    +:+ +#++:++#+  +#++:++#++: +#+
++#+   +#+# +#+       +#+    +#+ +#+    +#+ +#+     +#+ +#+
+#+#    #+# #+#       #+#    #+# #+#    #+# #+#     #+# #+#
+ ########  ########## ########  #########  ###     ### ##########
+*/
+
+
+
+/*
+		 (__)
+		 (oo)
+  /-------\/
+ / |     ||----> Custom scrollbars in webkit.
+*  ||----||
+  ___/  ___/
+  
+  Search key words => css webkit scrollbar
+  
+  Doc => http://css-tricks.com/custom-scrollbars-in-webkit/
+         
+         https://www.webkit.org/blog/363/styling-scrollbars/
+         
+		 http://almaer.com/blog/creating-custom-scrollbars-with-css-how-css-isnt-great-for-every-task
+         
+		 http://cssdeck.com/labs/css3-webkit-vertical-scrollbars
+*/
+
+::-webkit-scrollbar {
+	
+	width: 10px;
+	
+	height: 10px;
+	
+	background-color: transparent;
+	
+}
+
+::-webkit-scrollbar-track-piece {
+	
+	background-color: rgba(255, 255, 255, 1);
+	
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	
+	background-color: rgba(153, 153, 153, 1);
+	
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+	
+	background-color: rgba(153, 153, 153, 1);
+	
+}
+
+
+
+/*
+		 (__)
+		 (oo)
+  /-------\/
+ / |     ||----> Style the placeholder of a form element.
+*  ||----||
+  ___/  ___/
+  
+  Search key words => css webkit placeholder color
+  
+  Doc => http://css-tricks.com/almanac/selectors/p/placeholder/
+         
+         https://developer.mozilla.org/zh-CN/docs/Web/CSS/:-moz-placeholder
+*/
+/* WebKit browsers */
+::-webkit-input-placeholder {
+
+    color: #aaa;
+
+}
+/* Mozilla Firefox 4 to 18 */
+:-moz-placeholder {
+
+    color: #aaa;
+
+}
+/* Mozilla Firefox 19+ */
+::-moz-placeholder {
+
+    color: #aaa;
+
+}
+/* Internet Explorer 10+ */
+:-ms-input-placeholder {
+
+    color: #aaa;
+
+}
+
+
+
+/*
+		 (__)
+		 (oo)
+  /-------\/
+ / |     ||----> Draw any selected text yellow on red background.
+*  ||----||
+  ___/  ___/
+*/
+
+::-moz-selection {
+	
+	color: #FFF;
+	
+	background-color: none; /* Safari */
+	
+}
+
+::selection {
+	
+	color: #FFF;
+	
+	background-color: none; /* Firefox */
+	
+}
+
+
+
+/*
+		 (__)
+		 (oo)
+  /-------\/
+ / |     ||----> Draw selected text in a paragraph white on black.
+*  ||----||
+  ___/  ___/
+*/
+
+p::-moz-selection {
+	
+	color: #FFF;
+	
+	background-color: #000; /* Safari */
+	
+}
+
+p::selection {
+	
+	color: #FFF;
+	
+	background-color: #000; /* Firefox */
+	
+}
+
+
+
+body {
+	
+	color: #000;
+	
+	font: normal normal normal 14px/normal "新宋体", "宋体", "黑体";
+
+	min-width: 1024px;
+
+	overflow: hidden;
+	
+	background-color: white;
+	
+}
+
+img,
+object,
+embed {
+	
+	max-width: 100%;
+	
+	height: auto;
+	
+}
+
+object,
+embed {
+	
+	height: 100%;
+	
+}
+
+#map_canvas img,
+#google-maps img,
+#google-maps img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.google-maps img,
+.baidu-maps img,
+.map_canvas embed,
+.map_canvas object {
+	
+	max-width: none !important;
+	
+}
+
+img {
+	
+	display: inline-block;
+	
+	vertical-align: middle;
+	
+}
+
+select {
+	
+	width: 100%;
+
+	-webkit-appearance: none !important;
+	
+}
+
+select:hover {
+
+    background-color: #f3f3f3;
+
+    border-color: #999999;
+
+}
+
+select::-ms-expand {
+
+	display: none;
+
+}
+
+@-moz-document url-prefix() {
+
+  	select {
+		
+    	background: #fafafa;
+		
+    }
+
+	select:hover {
+		
+    	background: #f3f3f3;
+		
+    }
+	
+}
+
+del {
+	
+	text-decoration: line-through;
+	
+}
+
+abbr[title] {
+	
+	cursor: help;
+	
+}
+
+dfn[title] {
+	
+	border-bottom: 1px dotted;
+	
+	cursor: help;
+	
+}
