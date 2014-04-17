@@ -54,6 +54,16 @@
 	
 }
 
+.round-box-3px {
+
+	-webkit-border-radius: 3px;
+	
+	-moz-border-radius: 3px;
+	
+	border-radius: 3px;
+
+}
+
 
 
 /*
@@ -453,6 +463,16 @@
 	
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=0 ); /* IE6-8 */
 	
+}
+
+.bg-transition {
+
+	-webkit-transition: background-color 300ms ease-out;
+
+	-moz-transition: background-color 300ms ease-out;
+
+	transition: background-color 300ms ease-out;
+
 }
 
 

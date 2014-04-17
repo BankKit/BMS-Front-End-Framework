@@ -42,7 +42,7 @@ mixin accordian-item-out-loop (ln, bool, lnAry, boolAry)
 
 				li
 
-					h4(class='border_box slider-header current') ▇▇▇▇▇▇
+					h4(class='border_box bg-transition slider-header current') ▇▇▇▇▇▇
 
 					ul(class='slider-content hide')
 
@@ -52,7 +52,7 @@ mixin accordian-item-out-loop (ln, bool, lnAry, boolAry)
 
 				li
 
-					h4(class='border_box slider-header') ▇▇▇▇▇▇
+					h4(class='border_box bg-transition slider-header') ▇▇▇▇▇▇
 
 					ul(class='slider-content hide')
 
@@ -62,7 +62,7 @@ mixin accordian-item-out-loop (ln, bool, lnAry, boolAry)
 
 			li
 
-				h4(class='border_box slider-header') ▇▇▇▇▇▇
+				h4(class='border_box bg-transition slider-header') ▇▇▇▇▇▇
 
 				ul(class='slider-content hide')
 
@@ -80,7 +80,7 @@ doctype html
 
 <!--[if IE 7]><html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="zh"><![endif]-->
 
-<!--[if IEMobile 7]><html class="no-js iem7" lang="zh" itemscope itemtype="http://schema.org/WebPage" manifest='../manifest.appcache'><![endif]-->
+<!--[if IEMobile 7]><html class="no-js iem7" lang="zh" itemscope itemtype="http://schema.org/WebPage" manifest="../manifest.appcache"><![endif]-->
 
 <!--[if IE 8]><html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="zh"><![endif]-->
 
@@ -175,43 +175,43 @@ html(class="no-js", lang="zh", itemscope itemtype="http://schema.org/WebPage", m
 		
 	body
 
-		header(class='rela border_box container-outside boss-header wow fadeInRight', itemscope itemtype='http://schema.org/WPHeader')
+		header(class='rela border_box container-outside unselectable boss-header wow fadeInRight', itemscope itemtype='http://schema.org/WPHeader')
 
 			div(class='border_box container')
 
 				div(class='relative border_box clearfix content')
 
-					div(class='right person-info')
+					div(class='right person-info', itemscope itemtype='http://schema.org/Person')
 
 						div(class='clearfix person-panel-top')
 
 							a(class='left avatars' href='#')
 
-								img(src='http://placehold.it/38x38')
+								img(src='http://placehold.it/38x38', itemprop='image')
 
 							div(class='left person-detail')
 
-								a(class='person-name hover-link' href='#') ▇▇▇▇▇▇
+								a(class='person-name hover-link', href='#', itemprop='name') ▇▇▇▇▇▇
 
-								div(class='person-job') ▇▇▇▇▇▇
+								div(class='person-job', itemprop='jobTitle') ▇▇▇▇▇▇
 
 						div(class='person-panel-bottom')
 
-							a(class='user-state off' href='#') &nbsp;
+							a(class='bg-transition user-state off' href='#') &nbsp;
 
-					a(class='right clearfix person-block pb_1' href='#')
+					a(class='right clearfix bg-transition person-block pb_1' href='#')
 
 						div(class='left pbd_1') 完成
 
 						div(class='right pbd_2') (99999)
 
-					a(class='right clearfix person-block pb_2' href='#')
+					a(class='right clearfix bg-transition person-block pb_2' href='#')
 
 						div(class='left pbd_1') 通知
 
 						div(class='right pbd_2') (99999)
 
-					a(class='right clearfix person-block pb_3' href='#')
+					a(class='right clearfix bg-transition person-block pb_3' href='#')
 
 						div(class='left pbd_1') 待办
 
@@ -220,7 +220,7 @@ html(class="no-js", lang="zh", itemscope itemtype="http://schema.org/WebPage", m
 					// Fucking Jerk · Hengyuan Finance
 					h1(class='absolute left init') ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
 
-		aside(class='fixed border_box wow fadeInLeft', itemscope itemtype='http://www.schema.org/WPSideBar')
+		aside(class='fixed border_box unselectable wow fadeInLeft', itemscope itemtype='http://www.schema.org/WPSideBar')
 
 			a(class='left x-center logo', itemscope itemtype='http://schema.org/logo')
 
@@ -238,11 +238,11 @@ html(class="no-js", lang="zh", itemscope itemtype="http://schema.org/WebPage", m
 
 			address(class='left x-center border_box') 上海市静安区安远路555号静安门大厦808室
 
-		main(class='rela minHeight-2000 container-outside border_box area-placeholder wow fadeInRight', role='main')
+		main(class='rela minHeight-500 container-outside border_box area-placeholder wow fadeInRight', role='main')
 
-			div(class='border_box container minHeight-2000')
+			div(class='border_box container minHeight-500')
 
-				div(class='border_box content minHeight-2000')
+				div(class='border_box content minHeight-500')
 
 					block content
 
@@ -263,4 +263,4 @@ html(class="no-js", lang="zh", itemscope itemtype="http://schema.org/WebPage", m
 //
 //* Creation Date: 2014.04.04 16:45 ( Tony ).
 //
-//* Last Update: 2014.04.16 17:26 ( Tony ).
+//* Last Update: 2014.04.17 17:04 ( Tony ).

@@ -1,0 +1,86 @@
+//
+
+	Statement: ...//TODO: Write statement.
+
+	Describe:     ...//TODO: Check description.
+
+	Further Changes, Comments: ...//TODO: Give a further changes and comments link.
+
+	Docs: ...//TODO: Give a link about project documents.
+
+	Original Author: 沈维忠 ( Shen Weizhong / Tony Stark ).
+
+	Thanks: ...//TODO: If there are some contributors, just mark them.
+
+	Version: 0.1.0-alpha
+
+	Creation Date: 2014.04.17 10:13 ( Tony ).
+
+	Last Update: 2014.04.17 16:56 ( Tony ).    ...//TODO: Update the 'Last Update'.
+
+	Music ( Custom ): Beautiful Times.mp3    ...//TODO: If you are listenning some music, just write the name of songs.
+
+	License: ...//TODO: Give a license.
+
+	Copyright: ...//TODO: Give a copyright.
+
+
+
+mixin common-table-row-loop (ln)
+
+	-for (var i = 0; i < ln; i ++)
+
+		div(class='minHeight_50 clearfix border_box bg-transition table-row')
+
+			div(class='left trow1 table-cell')
+
+			div(class='left trow2 table-cell', itemprop='name') HY-SJ335522
+
+			div(class='left trow3 table-cell', itemprop='text') iPhone 5S
+
+			div(class='left trow4 table-cell', itemprop='text') &yen; 5800.00
+
+			div(class='left trow5 table-cell', itemprop='text') Lucian Hong
+
+			div(class='left trow6 table-cell', itemprop='text') 2014/02/03 16:00
+
+			//default, waiting, success, warning
+			div(class='left trow7 table-cell warning')
+
+				i(class='hide text-center round-box-3px i_1') 默认
+
+				i(class='hide text-center round-box-3px i_2') 等待
+
+				i(class='hide text-center round-box-3px i_3') 成功
+
+				i(class='hide text-center round-box-3px i_4') 警告
+
+
+
+div(class='minHeight-150 common-table', itemscope itemtype='http://schema.org/Table')
+
+	meta(itemprop='mainContentOfPage', content='true')
+
+	div(class='border_box table-title')
+
+		h1(class='left', itemprop='about') 表单标题
+
+	div(class='border_box table-header')
+
+		div(class='left h_1') &nbsp;
+
+		div(class='left h_2') 流水号
+
+		div(class='left h_3') 产品名称
+
+		div(class='left h_4') 售价
+
+		div(class='left h_5') 姓名
+
+		div(class='left h_6') 时间
+
+		div(class='left h_7') 状态
+
+	div(class='border_box table-row-set')
+
+		+common-table-row-loop(5)

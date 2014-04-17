@@ -19,7 +19,7 @@
  * 
  * Creation Date: 2014.03.26 14:31 ( Tony ).
  * 
- * Last update: 2014.04.16 15:02 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * Last update: 2014.04.17 17:08 ( Tony ).    ...//TODO: Update the 'Last Update'.
  * 
  * Music ( Custom ):     ...//TODO: If you are listenning some music, just write the name of songs.
  * 
@@ -143,7 +143,7 @@
 
 ::-moz-selection {
 	
-	color: #FFF;
+	color: #000;
 	
 	background-color: none; /* Safari */
 	
@@ -151,7 +151,7 @@
 
 ::selection {
 	
-	color: #FFF;
+	color: #000;
 	
 	background-color: none; /* Firefox */
 	
@@ -170,17 +170,17 @@
 
 p::-moz-selection {
 	
-	color: #FFF;
+	color: #000;
 	
-	background-color: #000; /* Safari */
+	background-color: none; /* Safari */
 	
 }
 
 p::selection {
 	
-	color: #FFF;
+	color: #000;
 	
-	background-color: #000; /* Firefox */
+	background-color: none; /* Firefox */
 	
 }
 

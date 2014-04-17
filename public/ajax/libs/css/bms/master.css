@@ -17,7 +17,7 @@
  * 
  * Creation Date: 2014.04.16 15:48 ( Tony ).
  * 
- * Last Update: 2014.04.16 17:01 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * Last Update: 2014.04.17 17:05 ( Tony ).    ...//TODO: Update the 'Last Update'.
  * 
  * Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
  * 
@@ -187,12 +187,6 @@ aside > ul.accordian .slider-header {
 
 	background: url(../../img/bms_front_end_framework/icon/arrow4.png) 165px center no-repeat;
 
-	-webkit-transition: background-color 300ms ease-out;
-
-	-moz-transition: background-color 300ms ease-out;
-
-	transition: background-color 300ms ease-out;
-
 }
 
 aside > ul.accordian .slider-header:hover {
@@ -281,6 +275,8 @@ aside .contact-tel {
 }
 
 aside address {
+
+	cursor: default;
 
 	color: #666;
 
@@ -424,12 +420,6 @@ header.boss-header > .container > .content {
 
 	height: 38px;
 
-	-webkit-transition: background-color 300ms ease-out;
-
-	-moz-transition: background-color 300ms ease-out;
-
-	transition: background-color 300ms ease-out;
-
 }
 
 .person-info .user-state.off {
@@ -473,12 +463,6 @@ header.boss-header > .container > .content .person-block {
 	background-repeat: no-repeat;
 
 	background-position: center 15px;
-
-	-webkit-transition: background-color 300ms ease-out;
-
-	-moz-transition: background-color 300ms ease-out;
-
-	transition: background-color 300ms ease-out;
 
 }
 
@@ -591,5 +575,11 @@ header.boss-header > .container > .content > h1.init {
 main.area-placeholder {
 
 	z-index: 1;
+
+}
+
+main > .container > .content {
+
+	padding-top: 15px;
 
 }
