@@ -25,10 +25,8 @@ logo.svg
 
 
 
-
 public/ajax/libs/css/bms/index.css
 public/ajax/libs/css/bms/master.css
-
 
 public/ajax/libs/css/bms_front_end_framework/base/abbreviation.css
 public/ajax/libs/css/bms_front_end_framework/base/blockquote.css
@@ -66,7 +64,6 @@ public/ajax/libs/css/bms_front_end_framework/scaffolding/layout.fixed.css
 public/ajax/libs/css/bms_front_end_framework/scaffolding/layout.fluid.css
 public/ajax/libs/css/bms_front_end_framework/scaffolding/util.css
 
-
 public/ajax/libs/css/normalize/1.1.3/normalize.css
 public/ajax/libs/css/normalize/1.1.3/normalize.min.css
 
@@ -75,7 +72,6 @@ public/ajax/libs/css/normalize/2.1.3/normalize.min.css
 
 public/ajax/libs/css/normalize/3.0.0/normalize.css
 public/ajax/libs/css/normalize/3.0.0/normalize.min.css
-
 
 public/ajax/libs/css/reset_css/2.0/css.reset.css
 
@@ -104,6 +100,4 @@ public/ajax/libs/js/bms_front_end_framework/app/master.main.js
 public/ajax/libs/js/bms_front_end_framework/common.js
 public/ajax/libs/js/bms_front_end_framework/master.js
 
-
-public/ajax/libs/js/wow/0.1.6/wow.js
 public/ajax/libs/js/wow/0.1.6/wow.min.js
