@@ -16,9 +16,9 @@
 
 	Creation Date: 2014.04.17 10:13 ( Tony ).
 
-	Last Update: 2014.04.17 16:56 ( Tony ).    ...//TODO: Update the 'Last Update'.
+	Last Update: 2014.04.22 11:58 ( Tony ).    ...//TODO: Update the 'Last Update'.
 
-	Music ( Custom ): Beautiful Times.mp3    ...//TODO: If you are listenning some music, just write the name of songs.
+	Music ( Custom ): Beautiful Times.mp3; No Ceiling.mp3    ...//TODO: If you are listenning some music, just write the name of songs.
 
 	License: ...//TODO: Give a license.
 
@@ -30,32 +30,11 @@ mixin common-table-row-loop (ln)
 
 	-for (var i = 0; i < ln; i ++)
 
-		div(class='minHeight_50 clearfix border_box bg-transition table-row')
-
-			div(class='left trow1 table-cell')
-
-			div(class='left trow2 table-cell', itemprop='name') HY-SJ335522
-
-			div(class='left trow3 table-cell', itemprop='text') iPhone 5S
-
-			div(class='left trow4 table-cell', itemprop='text') &yen; 5800.00
-
-			div(class='left trow5 table-cell', itemprop='text') Lucian Hong
-
-			div(class='left trow6 table-cell', itemprop='text') 2014/02/03 16:00
-
-			//default, waiting, success, warning
-			div(class='left trow7 table-cell warning')
-
-				i(class='hide text-center round-box-3px i_1') 默认
-
-				i(class='hide text-center round-box-3px i_2') 等待
-
-				i(class='hide text-center round-box-3px i_3') 成功
-
-				i(class='hide text-center round-box-3px i_4') 警告
+		block
 
 
+
+h4 普通表格
 
 div(class='minHeight-150 common-table', itemscope itemtype='http://schema.org/Table')
 
@@ -84,3 +63,28 @@ div(class='minHeight-150 common-table', itemscope itemtype='http://schema.org/Ta
 	div(class='border_box table-row-set')
 
 		+common-table-row-loop(5)
+
+			div(class='minHeight_50 clearfix border_box bg-transition table-row')
+
+				div(class='left trow1 table-cell')
+
+				div(class='left trow2 table-cell', itemprop='name') HY-SJ335522
+
+				div(class='left trow3 table-cell', itemprop='text') iPhone 5S
+
+				div(class='left trow4 table-cell', itemprop='text') &yen; 5800.00
+
+				div(class='left trow5 table-cell', itemprop='text') Lucian Hong
+
+				div(class='left trow6 table-cell', itemprop='text') 2014/02/03 16:00
+
+				//default, waiting, success, warning
+				div(class='left trow7 table-cell warning')
+
+					i(class='hide text-center round-box-3px i_1') 默认
+
+					i(class='hide text-center round-box-3px i_2') 等待
+
+					i(class='hide text-center round-box-3px i_3') 成功
+
+					i(class='hide text-center round-box-3px i_4') 警告

@@ -1,9 +1,9 @@
 mixin ie (sCondition, eCondition)
 
 	|<!--[!{sCondition}>
-	
+
 	block
-	
+
 	|<!!{eCondition}]-->
 
 
@@ -87,7 +87,7 @@ doctype html
 <!--[if IE 9]><html class="ie ie9 ie-lt10 no-js" lang="zh" itemscope itemtype="http://schema.org/WebPage"><![endif]-->
 
 <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)]><!-->
-html(class='no-js', lang='zh', itemscope itemtype='http://schema.org/WebPage', manifest='../manifest.appcache')
+html(class='no-js', lang='zh', itemscope itemtype='http://schema.org/WebPage')
 	<!--<![endif]-->
 	
 	head
@@ -115,7 +115,8 @@ html(class='no-js', lang='zh', itemscope itemtype='http://schema.org/WebPage', m
 			brings the bars back. Tapping back in the content dismisses them again. 
 			Reference, 
 			http://www.everythingicafe.com/forum/threads/lets-talk-ios-7-1-beta-2.104595/
-		meta(name='viewport', content='width = device-width, initial-scale = 1, minimal-ui')
+		// Offical: content='width = device-width, initial-scale = 1, minimal-ui'
+		meta(name='viewport', content='width = 1024, initial-scale = 1, minimal-ui')
 		
 		meta(name='HandheldFriendly', content='true')
 		
@@ -168,84 +169,84 @@ html(class='no-js', lang='zh', itemscope itemtype='http://schema.org/WebPage', m
 		
 		// Public script snippet.
 		include ../snippet/public.script.jade
-
+		
 		script.
-
+			
 			new WOW().init();
 		
 	body
-
+		
 		header(class='rela border_box container-outside unselectable boss-header wow fadeInRight', itemscope itemtype='http://schema.org/WPHeader')
-
+			
 			div(class='border_box container')
-
+				
 				div(class='relative border_box clearfix content')
-
+					
 					div(class='right person-info', itemscope itemtype='http://schema.org/Person')
-
+						
 						div(class='clearfix person-panel-top')
-
-							a(class='left avatars' href='#')
-
+							
+							a(class='left avatars', href='#', hreflang='zh')
+								
 								img(src='http://placehold.it/38x38', itemprop='image')
-
+								
 							div(class='left person-detail')
-
-								a(class='person-name hover-link', href='#', itemprop='name') ▇▇▇▇▇▇
-
+								
+								a(class='person-name hover-link', href='#', itemprop='name', hreflang='zh') ▇▇▇▇▇▇
+								
 								div(class='person-job', itemprop='jobTitle') ▇▇▇▇▇▇
-
+								
 						div(class='person-panel-bottom')
-
-							a(class='bg-transition user-state off' href='#') &nbsp;
-
-					a(class='right clearfix bg-transition person-block pb_1' href='#')
-
+							
+							a(class='bg-transition user-state off', href='#', hreflang='zh') &nbsp;
+							
+					a(class='right clearfix bg-transition person-block pb_1', href='#', hreflang='zh')
+						
 						div(class='left pbd_1') 完成
-
+						
 						div(class='right pbd_2') (99999)
-
-					a(class='right clearfix bg-transition person-block pb_2' href='#')
-
+						
+					a(class='right clearfix bg-transition person-block pb_2', href='#', hreflang='zh')
+						
 						div(class='left pbd_1') 通知
-
+						
 						div(class='right pbd_2') (99999)
-
-					a(class='right clearfix bg-transition person-block pb_3' href='#')
-
+						
+					a(class='right clearfix bg-transition person-block pb_3', href='#', hreflang='zh')
+						
 						div(class='left pbd_1') 待办
-
+						
 						div(class='right pbd_2') (99999)
-
+						
 					// Fucking Jerk · Hengyuan Finance
 					h1(class='absolute left init') ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
-
+					
 		aside(class='fixed border_box unselectable wow fadeInLeft', itemscope itemtype='http://www.schema.org/WPSideBar')
-
-			a(class='left x-center logo', itemscope itemtype='http://schema.org/logo')
-
+			
+			a(class='left x-center logo', itemscope itemtype='http://schema.org/logo', hreflang='zh')
+			
 			div(class='text-left border_box slogan slogan-1') Management System
-
+			
 			div(class='text-center slogan slogan-2') 亨元金融后台管理系统
-
+			
 			div(class='text-right border_box slogan slogan-3') v2.0.1
-
+			
 			ul(class='accordian')
-
+				
 				+accordian-item-out-loop(4, true, [5, 3, 6, 12], [true, false, false, false])
-
+				
 			a(href='tel:02162307418', class='left x-center hover-link contact-tel border_box') (021)6230-7418
-
+			
 			address(class='left x-center border_box') 上海市静安区安远路555号静安门大厦808室
-
+			
 		main(class='rela minHeight-500 container-outside border_box area-placeholder wow fadeInRight', role='main')
-
+			
 			div(class='border_box container minHeight-500')
-
+				
 				div(class='border_box content minHeight-500')
-
+					
 					block content
-
+					
 		block private-script
 		
 		include ../snippet/google.analytics.jade
@@ -263,4 +264,4 @@ html(class='no-js', lang='zh', itemscope itemtype='http://schema.org/WebPage', m
 //
 //* Creation Date: 2014.04.04 16:45 ( Tony ).
 //
-//* Last Update: 2014.04.19 18:23 ( Tony ).
+//* Last Update: 2014.04.23 21:23 ( Tony ).
