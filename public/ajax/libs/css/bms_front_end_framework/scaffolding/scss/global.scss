@@ -17,7 +17,7 @@
  * 
  * Creation Date: 2014.04.23 21:30 ( Tony ).
  * 
- * Last update: 2014.04.24 11:17 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * Last update: 2014.04.25 13:48 ( Tony ).    ...//TODO: Update the 'Last Update'.
  * 
  * Music ( Custom ):     ...//TODO: If you are listenning some music, just write the name of songs.
  * 
@@ -42,17 +42,17 @@ html, body {
 	
 	color: #000;
 	
-	font: normal normal normal 14px/normal "新宋体", "宋体", "微软雅黑", "黑体";
+	font: normal normal normal 62.5%/normal "新宋体", "宋体", "微软雅黑", "黑体", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	
 	direction: ltr;
 	
 	unicode-bidi: embed;
 	
-	min-width: 1024px;
+	min-width: 64rem; /* 1024 ÷ 16 = 64 (rem) */
 	
 	overflow: hidden;
 	
-	background-color: #FFF;
+	background-color: rgba(255, 255, 255, 1);
 	
 }
 

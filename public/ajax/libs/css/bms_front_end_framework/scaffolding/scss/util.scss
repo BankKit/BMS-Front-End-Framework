@@ -62,6 +62,14 @@
 	
 }
 
+.box-shadow {
+	
+	-webkit-box-shadow: 30px 30px 40px 0 rgba(0, 0, 0, 0.2); /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+	
+	box-shadow: 30px 30px 40px 0 rgba(0, 0, 0, 0.2); /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+	
+}
+
 
 
 /*
@@ -1103,6 +1111,16 @@
 	height: auto !important;
 	
 	height: 30px;
+	
+}
+
+.minHeight-40 {
+	
+	min-height: 40px;
+	
+	height: auto !important;
+	
+	height: 40px;
 	
 }
 
