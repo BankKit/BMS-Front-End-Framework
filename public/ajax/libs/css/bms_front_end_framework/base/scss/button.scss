@@ -192,6 +192,36 @@ button.contrast:hover, button.contrast:focus,
 
 
 
+/* Button · Upload */
+
+button.upload,
+
+.button.upload {
+
+	line-height: 30px;
+
+	width: 80px;
+
+	height: 30px;
+
+	margin: 0;
+
+	padding: 0;
+
+	background-color: #009ad7;
+
+}
+
+button.upload:hover, button.upload:focus,
+
+.button.upload:hover, .button.upload:focus {
+	
+	background-color: rgba(0, 0, 0, 1);
+	
+}
+
+
+
 /* Button · Large */
 
 button.large,

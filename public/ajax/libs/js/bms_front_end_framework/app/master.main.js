@@ -23,7 +23,7 @@
  * 
  * Creation Date: 2014.04.15 16:46 ( Tony ).
  * 
- * Last Update: 2014.04.15 16:52 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * Last Update: 2014.04.15 17:49 ( Tony ).    ...//TODO: Update the 'Last Update'.
  * 
  * Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
  * 
@@ -39,6 +39,8 @@
 	fn = function (require) {
 		
 		var SJ, srl, easing, modernizr, tlns, extend, _mod, mute, evtName;
+
+		var upload, aside, datepicker;
 		
 		SJ = require('jquery');
 		
@@ -51,6 +53,16 @@
 			tlns = tlns || {}; //top-level namespace
 
 			modernizr.touch ? evtName = 'touchstart' : evtName = 'click';
+
+			$(':root').studioScroll({zindex: 50, cursorborder: 0, cursorborderradius: 0});
+
+			aside = require('component/aside');
+
+			upload = require('component/common.upload');
+
+			datepicker = require('component/datepicker');
+
+			datepicker.excute([$('#iptDatePicker_1'), $('#iptDatePicker_2'), $('#iptDatePicker_3'), $('#iptDatePicker_4')]);
 			
 			// TODO: Import basic business logic script here.
 
@@ -59,72 +71,6 @@
 				e.stopPropagation();
 
 				e.preventDefault();
-
-			});
-
-			$(':root').studioScroll({zindex: 50, cursorborder: 0, cursorborderradius: 0});
-
-			$('aside > ul.accordian').studioScroll({zindex: 50, cursorborder: 0, cursorborderradius: 0});
-
-			$('.accordian').find('.slider-header.current').next().slideDown();
-
-			$('.slider-header').on(evtName, function () {
-
-				if( $(this).next().is(':hidden') ) { 
-
-					$('.slider-header').removeClass('current').next().slideUp(); 
-
-					$(this).toggleClass('current').next().slideDown();
-
-				}
-
-			});
-
-			var choosenItem = $('.slider-content').children('li.choosen');
-
-			choosenItem.data('asd', 0);
-
-			$('.slider-content').find('a').on('mouseover', function (e) {
-
-				var _this = $(this),
-
-					_parent = _this.parent();
-
-				if (!_parent.hasClass('choosen')) {
-
-					_parent.addClass('choosen');
-
-				}
-
-			}).on('mouseleave', function (e) {
-
-				var _this = $(this),
-
-					_parent = _this.parent();
-
-				if (_parent.data('asd') !== 0) {
-
-					_parent.removeClass('choosen');
-
-				}
-
-			});
-
-			$('.slider-content').find('a').on(evtName, function () {
-
-				var _this = $(this),
-
-					_parent = _this.parent();
-
-				$('.accordian').find('li.choosen').removeClass('choosen');
-
-				choosenItem.data('asd', '');
-
-				_parent.data('asd', 0);
-
-				choosenItem = _parent;
-
-				choosenItem.addClass('choosen');
 
 			});
 			
