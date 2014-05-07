@@ -40,7 +40,7 @@
 		
 		var SJ, srl, easing, modernizr, tlns, extend, _mod, mute, evtName;
 
-		var upload, aside, datepicker, checkbox;
+		var upload, aside, datepicker, checkbox, slt;
 		
 		SJ = require('jquery');
 		
@@ -56,6 +56,8 @@
 
 			$(':root').studioScroll({zindex: 50, cursorborder: 0, cursorborderradius: 0});
 
+
+
 			aside = require('component/aside');
 
 			upload = require('component/common.upload');
@@ -64,11 +66,17 @@
 
 			checkbox = require('component/checkbox');
 
+			slt = require('component/select');
+
+
+
 			checkbox.excute(SJ('input'));
 
+			slt.excute(SJ('select'));
+
 			datepicker.excute([$('#iptDatePicker_1'), $('#iptDatePicker_2'), $('#iptDatePicker_3'), $('#iptDatePicker_4')]);
-			
-			// TODO: Import basic business logic script here.
+
+
 
 			$('a[href=#]').on('click', function (e) {
 
@@ -77,6 +85,10 @@
 				e.preventDefault();
 
 			});
+
+
+			
+			// TODO: Import basic business logic script here.
 			
 		});
 		
