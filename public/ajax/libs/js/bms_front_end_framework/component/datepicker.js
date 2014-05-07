@@ -72,7 +72,7 @@ define(function (require) {
 		
 		isRTL: false,
 		
-		showMonthAfterYear: true,
+		showMonthAfterYear: false,
 		
 		yearSuffix: '年'
 		
@@ -88,7 +88,7 @@ define(function (require) {
 			
 			showAnim: 'fadeIn',
 			
-			showOtherMonths: true
+			showOtherMonths: false
 			
 		});
 
