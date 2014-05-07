@@ -40,7 +40,7 @@
 		
 		var SJ, srl, easing, modernizr, tlns, extend, _mod, mute, evtName;
 
-		var upload, aside, datepicker;
+		var upload, aside, datepicker, checkbox;
 		
 		SJ = require('jquery');
 		
@@ -61,6 +61,10 @@
 			upload = require('component/common.upload');
 
 			datepicker = require('component/datepicker');
+
+			checkbox = require('component/checkbox');
+
+			checkbox.excute(SJ('input'));
 
 			datepicker.excute([$('#iptDatePicker_1'), $('#iptDatePicker_2'), $('#iptDatePicker_3'), $('#iptDatePicker_4')]);
 			
