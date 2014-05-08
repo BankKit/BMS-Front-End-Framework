@@ -19,7 +19,7 @@
  * 
  * Creation Date: 2014.05.07 14:22 ( Tony ).
  * 
- * Last Update: 2014.05.07 14:23 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * Last Update: 2014.05.08 11:15 ( Tony ).    ...//TODO: Update the 'Last Update'.
  * 
  * Music ( Custom ): Good Feeling (Flo Rida).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
  * 
@@ -44,7 +44,7 @@ define(function (require) {
 
 
 
-	bindCheckbox = function (ipt) {
+	bindCheckbox = function (ipt, feedback) {
 
 		ipt.studioCheck({
 
@@ -54,6 +54,10 @@ define(function (require) {
 
 		    increaseArea: '0'
 
+		}).on('ifChecked', function () {
+
+			feedback.call(this);
+
 		});
 
 	};
@@ -62,11 +66,63 @@ define(function (require) {
 
 	return {
 
-		excute: function (ipt) {
+		excute: function () {
 
-			if (ipt !== null) {
+			var argL = arguments.length;
 
-				bindCheckbox(ipt);
+			if (argL <= 2) {
+
+				switch (argL) {
+
+					case 0: {
+
+						break;
+
+					}
+
+					case 1: {
+
+						if (arguments[0] instanceof SJ) {
+
+							bindCheckbox(arguments[0], SJ.noop);
+
+						}
+
+						break;
+
+					}
+
+					case 2: {
+
+						var arg_1 = arguments[0],
+
+							arg_2 = arguments[1];
+
+						if (arg_1 instanceof SJ) {
+
+							if (typeof arg_2 === 'function') {
+
+								bindCheckbox(arg_1, arg_2);
+
+							}
+
+						}
+
+						break;
+
+					}
+
+					default: {
+
+						break;
+
+					}
+
+				}
+
+			} else {
+
+				console.error('Fuck U!');
 
 			}
 

@@ -19,7 +19,7 @@
  * 
  * Creation Date: 2014.05.07 19:12 ( Tony ).
  * 
- * Last Update: 2014.05.07 19:18 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * Last Update: 2014.05.08 10:38 ( Tony ).    ...//TODO: Update the 'Last Update'.
  * 
  * Music ( Custom ): Good Feeling (Flo Rida).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
  * 
@@ -30,13 +30,15 @@
 
 define(function (require) {
 
-	var SJ, bindSelect;
+	var SJ, bindSelect, mute;
 
 
 
 	SJ = require('jquery');
 
 	bindSelect = require('slt');
+
+	mute = true;
 
 
 
@@ -45,8 +47,12 @@ define(function (require) {
 		slt.selecter({
 			
 			callback: function (value) {
-				
-				console.log('Value: ' + value + '.');
+
+				if (!mute) {
+
+					console.log('Value: ' + value + '.');
+
+				}
 				
 			}
 			

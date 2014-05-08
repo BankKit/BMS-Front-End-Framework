@@ -70,7 +70,7 @@
 
 
 
-			checkbox.excute(SJ('input'));
+			checkbox.excute(SJ('input'), function () { console.log('Feedback testing!'); });
 
 			slt.excute(SJ('select'));
 
