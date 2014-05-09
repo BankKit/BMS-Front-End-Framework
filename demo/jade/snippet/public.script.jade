@@ -37,7 +37,7 @@
 				
 				_defer: 'false',
 				
-				url: '//resource.fenqimall.com/ajax/libs/js/html5shiv/3.7.0/html5shiv.min.js'
+				url: staticCDNBaseUrl + 'js/html5shiv/3.7.0/html5shiv.min.js'
 				
 			},
 			
@@ -51,7 +51,7 @@
 				
 				_defer: 'true',
 				
-				url: '//resource.fenqimall.com/ajax/libs/js/modernizr/2.7.0/modernizr.min.js'
+				url: staticCDNBaseUrl + 'js/modernizr/2.7.0/modernizr.min.js'
 				
 			},
 
@@ -65,14 +65,14 @@
 				
 				_defer: 'true',
 				
-				url: '../public/ajax/libs/js/wow/0.1.6/wow.min.js'
+				url: staticBaseUrl + 'js/wow/0.1.6/wow.min.js'
 
 			}
 			
 		}
 
 
-- var _default = {html5shiv: {active: true, script: true, condition: [true, 'if (gte IE 6)&(lte IE 9)]', '[endif'], _defer: 'false', url: '//resource.fenqimall.com/ajax/libs/js/html5shiv/3.7.0/html5shiv.min.js'}, modernizr: {active: true, script: false, condition: [false, '', ''], _defer: 'true', url: '//resource.fenqimall.com/ajax/libs/js/modernizr/2.7.0/modernizr.min.js'}, wow: {active: true, script: false, condition: [false, '', ''], _defer: 'true', url: '../public/ajax/libs/js/wow/0.1.6/wow.min.js'}}
+- var _default = {html5shiv: {active: true, script: true, condition: [true, 'if (gte IE 6)&(lte IE 9)]', '[endif'], _defer: 'false', url: staticCDNBaseUrl + 'js/html5shiv/3.7.0/html5shiv.min.js'}, modernizr: {active: true, script: false, condition: [false, '', ''], _defer: 'true', url: staticCDNBaseUrl + 'js/modernizr/2.7.0/modernizr.min.js'}, wow: {active: true, script: false, condition: [false, '', ''], _defer: 'true', url: staticBaseUrl + 'js/wow/0.1.6/wow.min.js'}}
 
 - var opts = {}
 
@@ -138,3 +138,21 @@ mixin judgement (index, val)
 
 
 // Custom Iteration, Here
+
+
+
+
+
+// ___________  ______    _____  ___   ___  ___
+//("     _   ")/    " \  (\"   \|"  \ |"  \/"  |
+// )__/  \\__/// ____  \ |.\\   \    | \   \  /
+//	\\_ /  /  /    ) :)|: \.   \\  |  \\  \/
+//	|.  | (: (____/ // |.  \    \. |  /   /
+//	\:  |  \        /  |    \    \ | /   /
+//	 \__|   \"_____/    \___|\____\)|___/ 沈维忠 ( Shen Weizhong / Tony Stark ).
+//
+//* Version: 0.1.0-alpha
+//
+//* Creation Date: ~ ( Tony ).
+//
+//* Last Update: 2014.05.09 12:53 ( Tony ).

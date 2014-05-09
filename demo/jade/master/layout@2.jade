@@ -8,6 +8,36 @@ mixin ie (sCondition, eCondition)
 
 
 
+
+
+-var loaderUrl = '//resource.fenqimall.com/ajax/libs/js/requirejs/2.1.11/require.min.js'
+
+mixin jsloader (boot)
+
+	script(data-main= boot, src= loaderUrl)
+
+
+
+
+
+-var staticBaseUrl = '../public/ajax/libs/'
+
+-var staticCDNBaseUrl = '//resource.fenqimall.com/ajax/libs/'
+
+mixin importCSS (cdn, specificUrl)
+
+	if !cdn
+
+		link(rel= 'stylesheet', href= staticBaseUrl + specificUrl)
+
+	else
+
+		link(rel= 'stylesheet', href= staticCDNBaseUrl + specificUrl)
+
+
+
+
+
 mixin accordian-item-inner-loop (ln, bool)
 
 	- for (var i = 1; i <= ln; i++)
@@ -31,6 +61,10 @@ mixin accordian-item-inner-loop (ln, bool)
 			li
 
 				a(href='#', class='clean-link border_box') ▇▇▇▇▇▇▇
+
+
+
+
 
 mixin accordian-item-out-loop (ln, bool, lnAry, boolAry)
 
@@ -69,10 +103,6 @@ mixin accordian-item-out-loop (ln, bool, lnAry, boolAry)
 					+accordian-item-inner-loop(lnAry[i-1], boolAry[i-1])
 
 
-
-mixin jsloader (url)
-
-	script(data-main=url, src='//resource.fenqimall.com/ajax/libs/js/requirejs/2.1.11/require.min.js')
 
 
 
@@ -264,4 +294,4 @@ html(class='no-js', lang='zh', itemscope itemtype='http://schema.org/WebPage')
 //
 //* Creation Date: 2014.04.04 16:45 ( Tony ).
 //
-//* Last Update: 2014.04.23 21:23 ( Tony ).
+//* Last Update: 2014.05.09 13:01 ( Tony ).
